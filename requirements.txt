@@ -2,3 +2,6 @@ Flask==3.0.0
 flask-cors==4.0.0
 PuLP==2.7.0
 gunicorn==21.2.0
+Jinja2==3.1.6
+MarkupSafe==3.0.3
+Werkzeug==3.1.4
