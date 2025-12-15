@@ -177,7 +177,10 @@ CORS(app)  # Autorise ton frontend à appeler le backend
 
 @app.route('/')
 def home():
-    return render_template("index.html")
+    return jsonify({
+        'message': 'TextileOptim API is running!',
+        'endpoints': ['/optimiser', '/donnees-defaut']
+    })
 
 
 @app.route('/optimiser', methods=['POST'])
@@ -317,4 +320,5 @@ if __name__ == '__main__':
     print("🌐 Testez l'API : http://127.0.0.1:5000")
     print("="*60)
     app.run(host='0.0.0.0', port=5000)
+
 
